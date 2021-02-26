@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="tipCalc.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tip Calculator</h1>
+        <div class="card">
+            <div class="card-body">
+                <!-- bill amount -->
+                <div class="form-row">
+                    <label for="bill-amount">Bill Amount</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" id="bill-amount" class="form-control text-right" required>
+                    </div>
+                </div>
+                <!-- tip percentage -->
+                <div class="form-row">
+                    <label for="tip-amount">Tip Percentage</label>
+                    <div class="input-group mb-3">
+                        <select class="custom-select" id="tip-amount">
+                            <option value="0" selected>0%</option>
+                            <option value="5">5%</option>
+                            <option value="10">10%</option>
+                            <option value="15">15%</option>
+                            <option value="20">20%</option>
+                            <option value="25">25%</option>
+                        </select>
+                        <div class="input-group-append">
+                            <span class="input-group-text">%</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- number of guests -->
+                <div class="form-row">
+                    <label for="guests">Number of guests</label>
+                    <div class="input-group mb-3">
+                        <input type="number" id="guests" class="form-control text-right" value="1" min="1" required>
+                        <div class="input-group-append">
+                            <span class="input-group-text">guest(s)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  class="collapse" id="this">
+        <div class="card" >
+            <div class="card-body">
+                <div id="bill-output">
+                    <p class="text-left">Bill <span class="float-right"></span></p>
+                </div>
+                <div id="tip-output">
+                    <p class="text-left">Tip <span class="float-right"></span></p>
+                </div>
+                <div id="bill-total">
+                    <p class="text-left">Bill Total <span class="float-right"></span></p>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    <div  class="collapse" id="guest-card">
+        <div class="card" >
+            <div class="card-body">
+            	<div id="per-guest">
+                    <p class="text-left">Bill per Guest<span class="float-right"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <button type="button" onclick="tipCalculator()" class="btn btn-outline-success">Success</button>
+    </div>
+    <script type="text/javascript" src="tipCalc.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

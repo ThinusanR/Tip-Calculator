@@ -1,0 +1,30 @@
+body{
+	background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	
+
+
+}
+.card{
+	color:gray;
+}
+.container{
+	border:2px solid white;
+	margin: 0 auto;
+	color:white;
+	text-align: center;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+	.container {
+		max-width:340px;
+	}
+
+
+
+}
+
