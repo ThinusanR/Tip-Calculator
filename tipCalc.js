@@ -11,18 +11,21 @@ function tipCalculator(){
 
 	const totalTip = (tipPercentInput/100) * billAmountInput;
 	const totalBill = totalTip + billAmountInput;
-	console.log(totalTip);
-	document.querySelector("#bill-output span").textContent = billAmountInput;
-	document.querySelector("#tip-output span").textContent = totalTip;
-	document.querySelector("#bill-total span").textContent = totalBill;
 	
-	document.querySelector("#this").setAttribute("class","collapse show");
+	document.querySelector("#bill-output span").textContent = billAmountInput.toFixed(2);
+	document.querySelector("#tip-output span").textContent = totalTip.toFixed(2);
+	document.querySelector("#bill-total span").textContent = totalBill.toFixed(2);
+	
+	document.querySelector("#bill-breakdown").setAttribute("class","collapse show");
 
 
 
 	if (numOfPatronsInput > 1){
-		document.querySelector('#per-guest span').textContent = totalBill/numOfPatronsInput;
+		document.querySelector('#per-guest span').textContent = (totalBill/numOfPatronsInput).toFixed(2);
 		document.querySelector("#guest-card").setAttribute("class","collapse show");
+	}
+	else{
+		document.querySelector("#guest-card").setAttribute("class","collapse");
 	}
 
 
